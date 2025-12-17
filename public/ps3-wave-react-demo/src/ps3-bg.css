@@ -1,0 +1,66 @@
+:root {
+  --ps3-bg-color-1: #f77062;
+  --ps3-bg-color-2: #fe5196;
+  --ps3-bg-color-3: #009efd;
+  --ps3-bg-color-4: #2af598;
+}
+
+.ps3-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ps3-bg__gradient {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    -45deg,
+    var(--ps3-bg-color-1),
+    var(--ps3-bg-color-2),
+    var(--ps3-bg-color-3),
+    var(--ps3-bg-color-4)
+  );
+  background-size: 400% 400%;
+  animation: ps3-bg-gradient 30s ease infinite;
+  z-index: 0;
+}
+
+.ps3-bg__wave {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.ps3-bg__wave canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ps3-bg__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@keyframes ps3-bg-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

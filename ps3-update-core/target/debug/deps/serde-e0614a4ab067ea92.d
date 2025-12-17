@@ -1,0 +1,14 @@
+/Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/deps/serde-e0614a4ab067ea92.d: /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/build/serde-ffe1212ea6083ba8/out/private.rs
+
+/Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/deps/libserde-e0614a4ab067ea92.rlib: /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/build/serde-ffe1212ea6083ba8/out/private.rs
+
+/Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/deps/libserde-e0614a4ab067ea92.rmeta: /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/build/serde-ffe1212ea6083ba8/out/private.rs
+
+/Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/apt/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/build/serde-ffe1212ea6083ba8/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/apt/Downloads/ps3-update-extracted/ps3-update-core/target/debug/build/serde-ffe1212ea6083ba8/out

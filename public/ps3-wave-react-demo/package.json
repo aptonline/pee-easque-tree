@@ -1,0 +1,23 @@
+{
+  "name": "ps3-wave-react-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PS3-style startup wave background as a React component (Vite + local three.js)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.167.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tauri / Rust build output (THIS is usually the huge one)
+src-tauri/target/
+
+# Generated code/artifacts
+src-tauri/gen/
+
+# If you have a local DB or runtime data inside src-tauri
+src-tauri/*.db
+src-tauri/*.sqlite
+src-tauri/*.sqlite3
+
+# Logs
+src-tauri/*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local

@@ -1,0 +1,466 @@
+/* Custom CSS for PS3 Wave header and theme colors */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  -webkit-user-select: none;
+  overscroll-behavior: none;
+}
+
+* {
+  overscroll-behavior: none;
+}
+
+/* Header with PS3 Wave Background */
+header {
+  position: sticky;
+  top: 0;
+  height: 160px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(var(--theme-color-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--theme-color-rgb), 0.3);
+  overscroll-behavior: none;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Header top section with logo, title and settings */
+.header-top {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.header-titles h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(var(--theme-color-rgb), 0.5);
+}
+
+.header-titles h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0;
+  color: #999;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settings-icon-btn {
+  color: var(--theme-color);
+}
+
+/* Header search section */
+.header-search {
+  position: relative;
+  z-index: 10;
+  padding: 0 2rem 1rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-hint {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.header-hint a {
+  color: var(--theme-color);
+  text-decoration: none;
+}
+
+.header-hint a:hover {
+  text-decoration: underline;
+}
+
+/* Badge variants for status */
+[data-status-badge] {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Theme color variables that can be changed dynamically */
+.app[style*="--theme-color"] .did-you-know {
+  color: var(--theme-color);
+  text-shadow: 0 0 5px rgba(var(--theme-color-rgb), 0.3);
+}
+
+/* Search Results Section */
+.results-section {
+  margin: 2rem auto;
+  max-width: 800px;
+  width: 100%;
+  background: rgba(20, 20, 25, 0.95) !important;
+  border: 2px solid rgba(var(--theme-color-rgb), 0.5);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 30px rgba(var(--theme-color-rgb), 0.3);
+}
+
+.results-section > div {
+  padding: 1.5rem;
+}
+
+.results-section h3 {
+  margin-bottom: 1rem;
+}
+
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.update-card {
+  width: 100%;
+  background: rgba(30, 30, 35, 0.8) !important;
+  border: 1px solid rgba(var(--theme-color-rgb), 0.4);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(var(--theme-color-rgb), 0.2);
+}
+
+.update-card .p-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.update-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Remove button-specific classes - use standard Shadcn variants */
+
+/* Floating Downloads positioning with improved contrast */
+.floating-downloads {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  max-width: 400px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floating-download-item {
+  background: rgba(25, 25, 30, 0.98) !important;
+  border: 2px solid rgba(var(--theme-color-rgb), 0.5);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 0 20px rgba(var(--theme-color-rgb), 0.4);
+  backdrop-filter: blur(12px);
+}
+
+/* Enable elastic scrolling in scroll areas */
+[data-radix-scroll-area-viewport] {
+  overscroll-behavior: auto !important;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(20, 20, 20, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--theme-color-rgb), 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--theme-color-rgb), 0.7);
+}
+
+/* Tailwind overrides for primary color to match theme */
+.dark {
+  --primary: var(--theme-color-hsl, 197 100% 50%);
+  --ring: var(--theme-color-hsl, 197 100% 50%);
+}
+
+/* Update Shadcn Progress component to use theme color */
+[data-state="indeterminate"] > div,
+[role="progressbar"] > div {
+  background: var(--theme-color) !important;
+  box-shadow: 0 0 10px rgba(var(--theme-color-rgb), 0.5);
+}
+
+/* Theme color for buttons - force theme color with data attribute */
+button[data-theme-button="true"] {
+  background-color: var(--theme-color) !important;
+  background: var(--theme-color) !important;
+  border-color: rgba(var(--theme-color-rgb), 0.5) !important;
+  box-shadow: 0 2px 10px rgba(var(--theme-color-rgb), 0.3) !important;
+  color: #000000 !important;
+}
+
+button[data-theme-button="true"]:hover {
+  opacity: 0.9 !important;
+  background-color: var(--theme-color) !important;
+  background: var(--theme-color) !important;
+}
+
+/* Theme color for buttons - hover state */
+button.inline-flex:not([data-state]):hover {
+  opacity: 0.9 !important;
+}
+
+/* Input fields follow theme color */
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: var(--theme-color) !important;
+  box-shadow: 0 0 0 1px var(--theme-color) !important;
+  outline: none !important;
+}
+
+input[type="text"]:focus-visible,
+input[type="search"]:focus-visible {
+  border-color: var(--theme-color) !important;
+  box-shadow: 0 0 0 2px rgba(var(--theme-color-rgb), 0.3) !important;
+}
+
+/* Search field and Browse button styling */
+.header-search input,
+[role="dialog"] input[type="text"] {
+  border-color: rgba(var(--theme-color-rgb), 0.3);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-search input:hover,
+[role="dialog"] input[type="text"]:hover {
+  border-color: rgba(var(--theme-color-rgb), 0.5);
+}
+
+/* Checkbox theme color styling */
+button[data-theme-checkbox="true"] {
+  border-color: rgba(var(--theme-color-rgb), 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+button[data-theme-checkbox="true"]:hover {
+  border-color: var(--theme-color) !important;
+  background-color: rgba(var(--theme-color-rgb), 0.2) !important;
+  background: rgba(var(--theme-color-rgb), 0.2) !important;
+}
+
+button[data-theme-checkbox="true"][data-state="checked"] {
+  background-color: var(--theme-color) !important;
+  background: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+button[data-theme-checkbox="true"] svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+button[data-theme-checkbox="true"]:focus-visible {
+  outline: 2px solid var(--theme-color) !important;
+  outline-offset: 2px;
+}
+
+/* Legacy checkbox styling for backwards compatibility */
+button[data-state] {
+  border-color: rgba(var(--theme-color-rgb), 0.8) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+button[data-state]:hover {
+  border-color: var(--theme-color) !important;
+  background: rgba(var(--theme-color-rgb), 0.2) !important;
+}
+
+button[data-state="checked"] {
+  background: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+button[data-state] svg {
+  color: #000000 !important;
+}
+
+button[data-state]:focus-visible {
+  outline: 2px solid var(--theme-color) !important;
+  outline-offset: 2px;
+  ring-color: var(--theme-color) !important;
+}
+
+/* Theme preview circles in settings */
+.theme-color-preview {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Active theme color preview circle has black border */
+button[data-theme-active="true"] .theme-color-preview {
+  border-color: #000000 !important;
+}
+
+/* Active theme button highlight */
+button[data-theme-active="true"] {
+  border-width: 2px;
+  border-color: var(--theme-color) !important;
+  box-shadow: 0 0 15px rgba(var(--theme-color-rgb), 0.5);
+}
+
+/* Improved contrast for drawer */
+[data-vaul-drawer] {
+  background: rgba(25, 25, 30, 0.98) !important;
+  box-shadow:
+    0 -10px 40px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 0 20px rgba(var(--theme-color-rgb), 0.4);
+  backdrop-filter: blur(15px);
+  z-index: 200;
+}
+
+/* Drawer overlay should also be above header */
+[data-vaul-overlay] {
+  z-index: 150;
+}
+
+/* Drawer handle styling */
+[data-vaul-drawer] .h-2 {
+  background: var(--theme-color) !important;
+  opacity: 0.6;
+}
+
+/* Drawer specific button styling - Browse button */
+[data-vaul-drawer] button[data-theme-button="true"] {
+  background-color: var(--theme-color) !important;
+  background: var(--theme-color) !important;
+  border-color: rgba(var(--theme-color-rgb), 0.5) !important;
+  box-shadow: 0 2px 10px rgba(var(--theme-color-rgb), 0.3) !important;
+  color: #000000 !important;
+}
+
+[data-vaul-drawer] button[data-theme-button="true"]:hover {
+  opacity: 0.9 !important;
+}
+
+/* Drawer checkbox styling */
+[data-vaul-drawer] button[data-theme-checkbox="true"] {
+  border-color: rgba(var(--theme-color-rgb), 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-vaul-drawer] button[data-theme-checkbox="true"]:hover {
+  border-color: var(--theme-color) !important;
+  background-color: rgba(var(--theme-color-rgb), 0.2) !important;
+  background: rgba(var(--theme-color-rgb), 0.2) !important;
+}
+
+[data-vaul-drawer] button[data-theme-checkbox="true"][data-state="checked"] {
+  background-color: var(--theme-color) !important;
+  background: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+[data-vaul-drawer] button[data-theme-checkbox="true"] svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Drawer input fields */
+[data-vaul-drawer] input[type="text"] {
+  border-color: rgba(var(--theme-color-rgb), 0.3) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-vaul-drawer] input[type="text"]:hover {
+  border-color: rgba(var(--theme-color-rgb), 0.5) !important;
+}
+
+[data-vaul-drawer] input[type="text"]:focus,
+[data-vaul-drawer] input[type="text"]:focus-visible {
+  border-color: var(--theme-color) !important;
+  box-shadow: 0 0 0 2px rgba(var(--theme-color-rgb), 0.3) !important;
+  outline: none !important;
+}
+
+/* Blur effect for main content when dialog is open */
+.app-content {
+  transition: filter 0.2s ease;
+}
+
+.blur-content {
+  filter: blur(10px);
+}
+
+/* Main content area */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #999;
+}
+
+.empty-state .did-you-know {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state p:last-child {
+  font-size: 0.9rem;
+  color: #666;
+}

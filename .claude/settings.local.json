@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run tauri build:*)",
+      "Bash(cargo build:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(cargo add:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(./node_modules/.bin/tailwindcss:*)",
+      "Bash(cat:*)",
+      "Bash(npm run dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
