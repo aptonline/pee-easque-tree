@@ -1,4 +1,4 @@
-# Tauri + React + Typescript
+# Pee-Esque-Tree - Game Update Downloader
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 
