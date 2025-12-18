@@ -28,18 +28,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ✅ Fix for Ubuntu: install GTK/GDK + WebKitGTK deps
+      # ✅ Ubuntu: install + VERIFY GTK/GDK pkg-config files exist
       - name: Install Linux dependencies (Ubuntu)
         if: startsWith(matrix.platform, 'ubuntu')
+        shell: bash
         run: |
+          set -euxo pipefail
           sudo apt-get update
-          sudo apt-get install -y \
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
             pkg-config \
             libgtk-3-dev \
+            libglib2.0-dev \
+            libgdk-pixbuf-2.0-dev \
             libwebkit2gtk-4.1-dev \
             libappindicator3-dev \
             librsvg2-dev \
             patchelf
+
+          # Diagnostics: prove gdk-3.0.pc exists and pkg-config can see it
+          dpkg -L libgtk-3-dev | grep -E 'gdk-3\.0\.pc|gtk\+\-3\.0\.pc' || true
+          find /usr -name "gdk-3.0.pc" -o -name "gtk+-3.0.pc" || true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -56,10 +65,13 @@ jobs:
       - name: Install frontend dependencies
         run: npm ci
 
+      # ✅ Ubuntu: ensure pkg-config searches the common Ubuntu pkgconfig dirs
       - name: Build and publish (Tauri)
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Safe defaults for Ubuntu runners:
+          PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig:/usr/lib/pkgconfig
         with:
           tagName: ${{ github.event.inputs.version != '' && github.event.inputs.version || github.ref_name }}
           releaseName: Release ${{ github.event.inputs.version != '' && github.event.inputs.version || github.ref_name }}
