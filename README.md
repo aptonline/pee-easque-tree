@@ -1,3 +1,4 @@
+![](/public/pee-esque-tree-logo-small.png)
 # Pee-Esque-Tree — Game Update Downloader
 
 A cross-platform desktop app for downloading PS3 game updates.
