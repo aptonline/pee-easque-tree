@@ -12,7 +12,7 @@ A cross-platform desktop app for downloading PS3 game updates.
 
 ## Downloads
 
-Get the latest builds from the **Releases** page on this GitHub repo.
+Get the latest builds from the [**Releases**](https://github.com/aptonline/pee-esque-tree/releases) page on this GitHub repo.
 
 ---
 
@@ -54,7 +54,7 @@ Build outputs appear in:
 
 #### Option A — Use Sentinel (GUI)
 
-If you prefer a simple GUI workaround, you can use **Sentinel** (macOS) to allow an unsigned app you downloaded. This is effectively a convenience tool for removing Gatekeeper / quarantine restrictions.
+If you prefer a simple GUI workaround, you can use [**Sentinel**](https://github.com/alienator88/Sentinel) (macOS) to allow an unsigned app you downloaded. This is effectively a convenience tool for removing Gatekeeper / quarantine restrictions.
 
 #### Option B — Finder “Open”
 
